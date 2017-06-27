@@ -1,0 +1,6 @@
+#!/bin/sh
+
+cd /embyServer
+
+
+exec mono MediaBrowser.Server.Mono.exe -ffmpeg /usr/bin/ffmpeg -ffprobe /usr/bin/ffprobe

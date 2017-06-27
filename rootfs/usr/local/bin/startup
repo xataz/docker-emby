@@ -1,0 +1,19 @@
+#!/bin/sh
+
+## Create user for emby
+addgroup -g ${GID} emby && adduser -H -h /embyData -s /bin/sh -G emby -u ${UID} -D emby
+
+chown -R emby:emby /embyServer /embyData /etc/s6.d
+chmod +x /etc/s6.d/emby/run /etc/s6.d/.s6-svscan/finish
+
+if [ "${PREMIERE}" == "true" ]; then
+    sed -i -e 's/Promise.reject("overlimit")/(appStorage.setItem(cacheKey,JSON.stringify({lastValidDate:(new Date).getTime(),deviceId: params.deviceId})),Promise.resolve())/g' \
+            -e 's/Promise.reject()/(appStorage.setItem(cacheKey,JSON.stringify({lastValidDate:(new Date).getTime(),deviceId: params.deviceId})),Promise.resolve())/g' /embyServer/dashboard-ui/bower_components/emby-apiclient/connectionmanager.js 
+fi
+
+
+if [ '$@' == '' ]; then
+    exec su-exec emby:emby /bin/s6-svscan /etc/s6.d
+else
+    exec su-exec emby:emby "$@"
+fi

@@ -8,7 +8,7 @@ ENV GID=991 \
     PREMIERE=false
 
 LABEL description="Emby based on alpine" \
-      tags="latest 3.2.20.0 3.2 3" \
+      tags="latest 3.2.22.0 3.2.22 3.2 3" \
       maintainer="xataz <https://github.com/xataz>" \
       build_ver="2017070201"
 

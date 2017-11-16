@@ -1,14 +1,14 @@
 FROM xataz/mono:5
 
-ARG MEDIAINFO_VER=0.7.98
-ARG EMBY_VER=3.2.33.0
+ARG MEDIAINFO_VER=0.7.99
+ARG EMBY_VER=3.2.36.0
 
 ENV GID=991 \
     UID=991 \
     PREMIERE=false
 
 LABEL description="Emby based on alpine" \
-      tags="latest 3.2.33.0 3.2 3" \
+      tags="latest 3.2.36.0 3.2 3" \
       maintainer="xataz <https://github.com/xataz>" \
       build_ver="2017090601"
 

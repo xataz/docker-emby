@@ -8,7 +8,7 @@
 > If you don't trust, you can build yourself.
 
 ## Tag available
-* latest, 3.3.0.0, 3.3.0, 3.3, 3 [(Dockerfile)](https://github.com/xataz/docker-emby/blob/master/Dockerfile)
+* latest, 3.3.1.0, 3.3.1, 3.3, 3 [(Dockerfile)](https://github.com/xataz/docker-emby/blob/master/Dockerfile)
 
 ## Description
 What is [Emby](https://github.com/MediaBrowser/Emby) ?

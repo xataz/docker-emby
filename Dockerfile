@@ -10,7 +10,7 @@ ENV GID=991 \
 LABEL description="Emby based on alpine" \
       tags="latest 3.3.1.0 3.3.1 3.3 3" \
       maintainer="xataz <https://github.com/xataz>" \
-      build_ver="201803050231"
+      build_ver="201803060730"
 
 RUN export BUILD_DEPS="build-base \
                         git \
